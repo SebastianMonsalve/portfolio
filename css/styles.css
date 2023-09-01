@@ -884,9 +884,19 @@ span {
   font-size: 1em;
   padding-bottom: 0.4rem;
 }
+.portfolio-layer {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-layer div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
 .portfolio-layer a {
-  display: inline-flex;
+  display: flex;
   margin-top: 0.5rem;
   justify-content: center;
   align-items: center;
@@ -1036,10 +1046,9 @@ span {
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: rgba(51, 51, 51);
+    background-color: rgb(49, 49, 49);
     z-index: 1;
     font-size: 1.2em;
-    text-align: center;
     transform: translateX(-110%);
     transition: all 0.3s ease-in-out;
   }
@@ -1050,7 +1059,9 @@ span {
   }
 
   .menu li {
+    text-align: left;
     margin: 1.5rem;
+    padding-left: 12%;
   }
 
   .toggle-menu {
@@ -1184,30 +1195,6 @@ span {
 
 @media screen and (max-width: 50rem) {
   /*...........................................................................................*/
-  .menu {
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: rgba(51, 51, 51);
-    z-index: 1;
-    font-size: 1.2em;
-    text-align: center;
-    transform: translateX(-110%);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .show-menu {
-    transform: translateX(0%);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .menu li {
-    margin: 1.5rem;
-  }
-
   .toggle-menu {
     display: block;
   }
